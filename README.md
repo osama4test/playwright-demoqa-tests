@@ -42,28 +42,35 @@ playwright-qa-automation-boilerplate/
 
 ### 1. Clone the Repository
 
-```bash
+```
 git clone https://github.com/osama4test/playwright-automation-framework-boilerplate.git
 cd playwright-automation-framework-boilerplate
-
+```
+```
 npm install
-
+```
+```
 npx playwright install
-
+```
+```
 npx playwright test                 # Run all tests
 npx playwright test tests/smoke    # Run smoke tests
-
+```
+```
 npx playwright show-report
-
+```
+```
 BASE_URL=http://localhost:3000
 USERNAME=your_username
 PASSWORD=your_password
-
+```
+```
 test('Login with valid credentials @smoke', async ({ loginPage }) => {
   await loginPage.navigate();
   await loginPage.login('user@example.com', 'pass123');
   await expect(loginPage.page).toHaveURL('/dashboard');
 });
+```
 
 🏗️ Azure DevOps Pipeline Setup
 The project includes a ready-to-use pipeline config: azure-pipelines.yml
@@ -101,7 +108,8 @@ GitHub
 1. Save this file as `README.md` in the root of your repo.
 2. Commit and push:
 
-```bash
+```
 git add README.md
 git commit -m "Updated README for Azure DevOps CI/CD"
 git push
+```
