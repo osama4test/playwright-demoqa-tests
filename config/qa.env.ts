@@ -1,0 +1,1 @@
+export default { baseURL: 'http://qa.example.com' };

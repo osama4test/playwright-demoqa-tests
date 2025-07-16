@@ -1,0 +1,7 @@
+
+{
+  "environment": "dev",
+  "featureFlags": {
+    "newDashboard": true
+  }
+}

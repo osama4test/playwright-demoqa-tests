@@ -1,0 +1,1 @@
+export default { baseURL: 'https://app.example.com' };
