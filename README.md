@@ -10,7 +10,7 @@ playwright-qa-automation-boilerplate/
 ├── azure-pipelines.yml → Azure DevOps pipeline config ✅
 ├── config/ → Environment-specific configs (dev, qa, prod)
 ├── fixtures/ → Custom test fixtures (test context)
-├── pages/ → Page Object Models (LoginPage, DashboardPage, etc.)
+├── pages/ → Page Object Models (LoginPage)
 ├── tests/
 │ ├── smoke/ → Smoke test cases
 │ ├── regression/ → Regression test cases

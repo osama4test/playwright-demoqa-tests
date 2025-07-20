@@ -1,0 +1,15 @@
+{ 
+  "validData":{
+  "fullName": "Osama",
+  "email": "osama@example.com",
+  "currentAddress": "Karachi, Pakistan",
+  "permanentAddress": "Lahore, Pakistan"
+},
+ "InvalidData_emptyEmailData":{
+  "fullName": "Osama",
+  "email": "a.com",
+  "currentAddress": "Karachi, Pakistan",
+  "permanentAddress": "Lahore, Pakistan"
+}
+  
+}
