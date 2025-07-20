@@ -1,115 +1,62 @@
-# 🎭 Playwright Automation Framework Boilerplate
+# 🧪 Text Box Page - Automated UI Tests (Playwright)
 
-This is a robust and scalable **UI test automation framework** built using [Playwright](https://playwright.dev/), **TypeScript**, and the **Page Object Model (POM)** design pattern. It provides a clean structure to help teams get started with web UI testing fast, while supporting **smoke**, **regression**, and **end-to-end (E2E)** test execution.
+This folder contains automated UI test cases for the **Text Box** form on [demoqa.com/text-box](https://demoqa.com/text-box), built using [Playwright](https://playwright.dev/).
 
 ---
 
-## 📁 Folder Structure
+## 📌 Page Overview
 
-playwright-qa-automation-boilerplate/
-├── azure-pipelines.yml → Azure DevOps pipeline config ✅
-├── config/ → Environment-specific configs (dev, qa, prod)
-├── fixtures/ → Custom test fixtures (test context)
-├── pages/ → Page Object Models (LoginPage)
+The **Text Box** page is a simple form containing the following input fields:
+
+- Full Name (Text)
+- Email (Email)
+- Current Address (Textarea)
+- Permanent Address (Textarea)
+- Submit Button
+- Output section (Displays submitted data)
+
+---
+
+## 🧪 Test Scenarios Covered
+
+| Test Case ID | Description                         | Type              | Tag(s)     |
+|--------------|-------------------------------------|-------------------|------------|
+| TC-TEXT-001  | Submit form with all valid inputs   | Smoke, Functional | `@smoke`   |
+| TC-TEXT-002  | Submit form with empty email        | Smoke, Negative   | `@smoke`   |
+
+---
+
+## 🧰 Tech Stack
+
+- **Test Runner**: Playwright Test
+- **Language**: TypeScript
+- **Pattern**: Page Object Model (POM)
+- **Tags**: Used for filtering test types (e.g., `@smoke`)
+- **Fixtures**: Used for injecting Page Objects cleanly
+
+---
+
+## 🚀 How to Run the Tests
+
+Run all tests:
+
+```
+npx playwright test
+```
+```
+npx playwright test tests/smoke/textBox.spec.ts
+```
+📂 Folder Structure
 ├── tests/
-│ ├── smoke/ → Smoke test cases
-│ ├── regression/ → Regression test cases
-│ └── e2e/ → End-to-end test cases
-├── test-data/ → Static JSON data used in tests
-├── utils/ → Utility functions (API, DB, data generators)
-├── .env → Env variables (e.g., baseURL, credentials)
-├── playwright.config.ts → Playwright test runner configuration
-├── package.json → NPM scripts and dependencies
-└── tsconfig.json → TypeScript compiler settings
+│   └── smoke/
+│       └── textBox.spec.ts        # Test cases for the Text Box page
+├── pages/
+│   └── TextBoxPage.ts             # Page Object class
+├── fixtures/
+│   └── textBoxFixture.ts          # Custom test fixture for injecting TextBoxPage
+├── README.md                      # Project/test suite documentation
 
 
----
-
-## 🚀 Features
-
-- ✅ Built with **Playwright + TypeScript**
-- ✅ Modular structure using **Page Object Model**
-- ✅ Suite separation: **Smoke**, **Regression**, **E2E**
-- ✅ Custom **fixtures** for reusable setup
-- ✅ Test data-driven support
-- ✅ Multi-environment configuration
-- ✅ Headless execution, video, screenshot, and HTML report support
-- ✅ CI-ready with **Azure DevOps Pipelines**
-
----
-
-## 🛠️ Setup Instructions
-
-### 1. Clone the Repository
-
-```
-git clone https://github.com/osama4test/playwright-automation-framework-boilerplate.git
-cd playwright-automation-framework-boilerplate
-```
-```
-npm install
-```
-```
-npx playwright install
-```
-```
-npx playwright test                 # Run all tests
-npx playwright test tests/smoke    # Run smoke tests
-```
-```
-npx playwright show-report
-```
-```
-BASE_URL=http://localhost:3000
-USERNAME=your_username
-PASSWORD=your_password
-```
-```
-test('Login with valid credentials @smoke', async ({ loginPage }) => {
-  await loginPage.navigate();
-  await loginPage.login('user@example.com', 'pass123');
-  await expect(loginPage.page).toHaveURL('/dashboard');
-});
-```
-
-🏗️ Azure DevOps Pipeline Setup
-The project includes a ready-to-use pipeline config: azure-pipelines.yml
-
-🔧 Steps:
-Go to your Azure DevOps project
-
-Click Pipelines → New Pipeline
-
-Connect to your GitHub repo
-
-Select "YAML" and choose azure-pipelines.yml
-
-Save and run — it will:
-
-Set up Node.js
-
-Install dependencies
-
-Install Playwright browsers
-
-Run all tests
-
-You can customize the pipeline to publish reports, capture screenshots/videos, or deploy after tests.
-
-🧑‍💻 Author
+👤 Author
 Osama Bin Rashid
-GitHub
-
-
----
-
-### ✅ To Use It:
-
-1. Save this file as `README.md` in the root of your repo.
-2. Commit and push:
-
-```
-git add README.md
-git commit -m "Updated README for Azure DevOps CI/CD"
-git push
-```
+Playwright Automation Engineer | QA Enthusiast
