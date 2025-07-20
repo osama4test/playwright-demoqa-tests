@@ -13,7 +13,7 @@ export class TextBoxPage{
     readonly currentAddressOutput: Locator;
     readonly permanentAddressOutput: Locator;
 
-    constructor(public page:Page){
+    constructor(private readonly page:Page){
         this.fullNameInput = page.locator("#userName");
         this.emailInput = page.locator("#userEmail");
         this.currentAddressInput = page.locator("textarea#currentAddress");
