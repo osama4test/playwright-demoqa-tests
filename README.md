@@ -100,10 +100,12 @@ npx playwright test --grep @smoke
 📄 README.md                            # Project documentation
 
 👤 Author
+
 Osama Bin Rashid
 Playwright Automation Engineer | QA Enthusiast
 
 📌 Notes
+
 Playwright handles headless and headed modes by default.
 
 POM helps scale tests efficiently across different components.
