@@ -102,6 +102,7 @@ npx playwright test --grep @smoke
 👤 Author
 
 Osama Bin Rashid
+
 Playwright Automation Engineer | QA Enthusiast
 
 📌 Notes
